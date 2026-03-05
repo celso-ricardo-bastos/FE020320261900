@@ -1,0 +1,31 @@
+:root {
+    --cor-azul: green;
+    --tamanho-fonte: 10px;
+}
+
+* {}
+
+
+/* Seletor class */
+/* .logotipo {
+    color:blueviolet;
+} */
+
+/* Seletor ID */
+/* #logo {
+    color: var(--cor-azul);
+} */
+
+/* Seletor Elemento */
+/* div {
+    color: blue;
+} */
+
+/* p.rt1 {
+    font-size: 5px;
+}
+
+a[data-impacta="home"] {
+    font-size: 10px;
+    color: red;
+} */
