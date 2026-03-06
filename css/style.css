@@ -5,6 +5,7 @@
     --brand-log: #252B42;
     --second-text-color: #737373;
     --hover-text-color:#272935;
+    --hover-btn-color: #414c3a;
 }
 
 * {
@@ -16,11 +17,12 @@ html {
     font-size: 16px;
 }
 
+/* Section Header */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 100px;
+    padding: 20px 10%;
     background-color: var(--fade-secundary-color);
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -74,7 +76,37 @@ html {
 }
 
 .btn:hover {
-    background-color: #414c3a;
+    background-color: var(--hover-btn-color);
+}
+
+
+/* Secttion Main */
+.trust {
+    background-color: var(--fade-secundary-color);
+    padding: 70px 10%;
+    min-height: 80vh;
+    /* display: flex;
+    align-items: center; */
+}
+
+.images-tecnology {
+    background-color: rgba(0, 137, 179, 0);
+    background-image: url(../images/ellipse.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.trust .container {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.best-dental {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 20px;
 }
 
 
