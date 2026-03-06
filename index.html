@@ -20,34 +20,24 @@
 
 <body>
     <!-- Header -->
-    <header>
+    <header class="navbar">
         <!-- Folha de estilo inline -->
         <!-- <div class="logotipo" style="color:chartreuse">Brandname</div> -->
-        <div class="logotipo" id="logo">Brandname</div>
-        <nav>
+        <div class="logo"><a href="#">Brandname</a></div>
+        <nav class="menu">
             <ul>
-                <li>
-                   <a href="#" class="home" data-impacta="home"> Home </a>              
-                </li>
-                <li>
-                    <a href="products/product.html"  class="">Product</a>
-                </li>
-                <li>Pricing</li>
-                <li><a href="contacts/contact.html">Contact</a></li>
+                <li class="item-munu"><a class="item-link" href="#" title="Home">Home</a></li>
+                <li class="item-menu"><a class="item-link" href="products/product.html" class="">Product</a></li>
+                <li class="item-menu"><a class="item-link" href="#">Pricing</a></li>
+                <li class="item-menu"><a class="item-link" href="contacts/contact.html">Contact</a></li>
                 <!-- <li>
                     <a href="https://www.google.com/" target="_blank">Google</a>
                 </li> -->
             </ul>
         </nav>
-        <div>
-            <ul>
-                <li>
-                   <a href="#"> Login </a>              
-                </li>
-                <li>
-                    <a href="#">Join Us</a>
-                </li>
-            </ul>
+        <div class="nav-auth">
+            <a href="#" class="btn-login"> Login </a>
+            <a href="#" class="btn">Join Us</a>
         </div>
     </header>
     <main>
