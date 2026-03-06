@@ -17,6 +17,22 @@ html {
     font-size: 16px;
 }
 
+/* Font personalizada */
+@font-face {
+    font-family: peppersauce;
+    src: url(../font/pepper-sauce.ttf);
+}
+
+@font-face {
+    font-family: displayfont;
+    src: url(../font/PlayfairDisplayfont_wght.ttf);
+}
+
+@font-face {
+    font-family: lavi;
+    src: url(../font/LavishlyYours-Regular.ttf);
+}
+
 /* Section Header */
 .navbar {
     display: flex;
@@ -24,7 +40,12 @@ html {
     align-items: center;
     padding: 20px 10%;
     background-color: var(--fade-secundary-color);
-    font-family: Arial, Helvetica, sans-serif;
+    
+    /* font-family: "Macondo", cursive;
+    font-weight: 400;
+    font-style: normal; */
+
+    font-family: lavi;
 }
 
 .logo a {
@@ -83,8 +104,8 @@ html {
 /* Secttion Main */
 .trust {
     background-color: var(--fade-secundary-color);
-    padding: 70px 10%;
-    min-height: 80vh;
+    padding: 40px 10% 0;
+    min-height: 68vh;
     /* display: flex;
     align-items: center; */
 }
@@ -94,8 +115,6 @@ html {
     background-image: url(../images/ellipse.png);
     background-repeat: no-repeat;
     background-position: center;
-
-    border: #252B42 1px dotted;
     position: relative;
 }
 
