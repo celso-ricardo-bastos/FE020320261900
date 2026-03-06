@@ -108,9 +108,16 @@ html {
 
 .scores {
     position: absolute;
-    left: -50px;
-    top: 250px;
+    left: 0;
+    bottom: 0;
     z-index: 1;
+}
+
+.global-statics {
+    position: absolute;
+    right: -80px;
+    bottom: 150px;
+    z-index: 3;
 }
 
 .trust .container {
