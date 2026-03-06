@@ -94,6 +94,23 @@ html {
     background-image: url(../images/ellipse.png);
     background-repeat: no-repeat;
     background-position: center;
+
+    border: #252B42 1px dotted;
+    position: relative;
+}
+
+.single{
+    position: absolute;
+    left: -50px;
+    top: 250px;
+    z-index: 2;
+}
+
+.scores {
+    position: absolute;
+    left: -50px;
+    top: 250px;
+    z-index: 1;
 }
 
 .trust .container {
