@@ -6,6 +6,7 @@
     --second-text-color: #737373;
     --hover-text-color:#272935;
     --hover-btn-color: #414c3a;
+    --gray-color: #FAFAFA;
 }
 
 * {
@@ -33,6 +34,43 @@ html {
     src: url(../font/LavishlyYours-Regular.ttf);
 }
 
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
 /* Section Header */
 .navbar {
     display: flex;
@@ -46,6 +84,11 @@ html {
     font-style: normal; */
 
     font-family: displayfont;
+
+    /* box-shadow: 1px 2px 9px #b4b4b4;
+    position: fixed;
+    width: 100%;
+    z-index: 1000; */
 }
 
 .logo a {
@@ -100,7 +143,6 @@ html {
     background-color: var(--hover-btn-color);
 }
 
-
 /* Secttion Main */
 .trust {
     background-color: var(--fade-secundary-color);
@@ -118,11 +160,25 @@ html {
     position: relative;
 }
 
-.single{
+.anime {
+    transition-property: transform;
+    transition-duration: 2ms;
+    transition-timing-function: ease-in-out;
+    transform: rotate(0deg);
+    transform-origin: 0%;
+}
+
+.single {
     position: absolute;
     left: -50px;
     top: 250px;
     z-index: 2;
+}
+
+.single:hover, .scores:hover, .global-statics:hover {
+    transform: rotate(10deg);
+    transform-origin: 100%;
+    cursor: pointer;
 }
 
 .scores {
@@ -150,7 +206,19 @@ html {
     color: var(--primary-color);
     font-size: 1.3rem;
     margin-bottom: 20px;
+
+    text-shadow: 1px 1px 1px #000;
+    transition-property: text-shadow;
+    transition-duration: 1s;
+    transition-timing-function: ease-in;
 }
+
+
+.best-dental:hover {
+    text-shadow: 2px 1px 2px #000;
+    cursor: pointer;
+}
+
 
 
 /* Seletor class */
@@ -176,3 +244,44 @@ a[data-impacta="home"] {
     font-size: 10px;
     color: red;
 } */
+
+
+/* Footer */
+.footer .fields, .footer .footer-fields {
+    padding: 20px 10%;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer .container .top-footer, .footer .container .footer-fields{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .bottom-footer {
+    background-color: var(--gray-color);
+    border-top: var(--second-text-color) 1px solid;
+
+}
+
+.footer .field {
+    font-weight: bold;
+}
+
+.footer ul li {
+    line-height: 1.5rem;
+}
+
+.footer .redesociais {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer svg {
+    width: 30px;
+    color: #d61414
+}
+
