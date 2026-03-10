@@ -72,12 +72,14 @@ html {
 }
 
 /* Section Header */
+.header {
+    background-color: var(--fade-secundary-color);
+}
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 10%;
-    background-color: var(--fade-secundary-color);
+    padding: 20px 0;
     
     /* font-family: "Macondo", cursive;
     font-weight: 400;
@@ -98,6 +100,18 @@ html {
     text-decoration: none;
 }
 
+.logo {
+    transform:  scale(100%);
+    opacity: 1;
+    transition-property: transform, opacity;
+    transition-duration: 1000ms, 1s;
+}
+
+.logo:hover {
+    transform: scale(110%);
+    opacity: 0.5;
+}
+
 .menu ul {
     display: flex;
     list-style: none;
@@ -113,6 +127,8 @@ html {
 
 .item-link:hover {
     color: var(--hover-text-color);
+    position: relative;
+    top: -3px;
 }
 
 .nav-auth {
@@ -146,18 +162,40 @@ html {
 /* Secttion Main */
 .trust {
     background-color: var(--fade-secundary-color);
-    padding: 40px 10% 0;
+    padding: 40px 0 0;
     min-height: 68vh;
-    /* display: flex;
-    align-items: center; */
+}
+
+.h1 {
+    animation-name: efeitofont;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    /* font-size: 4vw; */
+}
+
+@keyframes efeitofont {
+    0% {
+        font-size: 50px;
+    }
+    100% {
+        font-size: inherit;
+    }
 }
 
 .images-tecnology {
     background-color: rgba(0, 137, 179, 0);
     background-image: url(../images/ellipse.png);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+
+}
+
+.images-tecnology .estudante{
+    max-width: 100%;
+    height: auto;
+
 }
 
 .anime {
@@ -170,9 +208,16 @@ html {
 
 .single {
     position: absolute;
-    left: -50px;
-    top: 250px;
+    left: -8%;
+    top: 42%;
     z-index: 2;
+    width: 50px;
+}
+
+@media screen and (min-width: 576px) {
+    .single {
+        width: 120px;
+    }
 }
 
 .single:hover, .scores:hover, .global-statics:hover {
@@ -258,6 +303,7 @@ a[data-impacta="home"] {
 .footer .container .top-footer, .footer .container .footer-fields{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer .bottom-footer {
@@ -284,4 +330,80 @@ a[data-impacta="home"] {
     width: 30px;
     color: #d61414
 }
+
+
+/* Aplicação do mobile first */
+/*
+ O mobile first é uma tecnica usada por desenvolvedores que 
+ garante a implementação de css primeiro nos dispositivos moveis
+*/
+.container-responsive {
+    max-width: 100%;
+    margin: auto;
+    padding: 5%;
+}
+
+/* Break points */
+@media screen and (min-width: 576px) {
+    .container-responsive {
+        max-width: 540px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .container-responsive {
+        max-width: 720px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .container-responsive {
+        max-width: 960px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container-responsive {
+        max-width: 1140px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .container-responsive {
+        max-width: 1320px;
+        margin: auto;
+    }
+}
+.btn-menu {
+    display: none;      
+}
+
+.btn-menu:hover ~ .navbar .menu {
+    display: block;  
+}
+
+ @media screen and (max-width: 992px) {
+    .btn-menu {
+        display: block; 
+    }
+    .menu {
+        display: none;
+    }
+
+    .menu ul {
+            flex-direction: column;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            background-color: #000000e5;
+            width: 100%;
+            z-index: 1000;
+        }
+}
+
+
 
