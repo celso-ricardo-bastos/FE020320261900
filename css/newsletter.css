@@ -1,0 +1,34 @@
+.newsletter h2 {
+    color: var(--primary-color);
+    font-size: 0.8rem;
+   
+}
+
+.news-header p, .news-header h2, .news-header h3  {
+    text-align: center;
+    margin: 10px;
+    padding: 0 25%;
+}
+
+.news-header h3 {
+    font-size: 2rem;
+}
+
+.news {
+    padding: 10% 0;
+}
+
+.news-form form {
+    text-align: center;
+}
+
+.news-form .btn {
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.news-form .email {
+    padding: 10px 5px;
+    border-radius: 3px;
+    width: 50%;
+}
