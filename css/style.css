@@ -149,10 +149,23 @@ html {
     text-decoration: none;
     background-color: var(--primary-color);
     color:var(--light-color);
-    padding: 12px 30px;
+    padding: 5px 40px 10px;
     border-radius: 5px;
     font-weight: bold;
     font-size: 0.9rem;
+}
+
+.btn::after {
+    content: "\00BB";
+    color: #000;
+    position: relative;
+    left: 10px;
+    font-size: 1.2rem;
+}
+
+.btn:hover::after {
+    left: 15px;
+    color: #fff;;
 }
 
 .btn:hover {
@@ -170,7 +183,7 @@ html {
     animation-name: efeitofont;
     animation-duration: 1s;
     animation-timing-function: ease-in;
-    /* font-size: 4vw; */
+    font-size: 1.2rem;
 }
 
 @keyframes efeitofont {
@@ -290,47 +303,7 @@ a[data-impacta="home"] {
     color: red;
 } */
 
-
-/* Footer */
-.footer .fields, .footer .footer-fields {
-    padding: 20px 10%;
-}
-
-.footer ul {
-    list-style: none;
-}
-
-.footer .container .top-footer, .footer .container .footer-fields{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.footer .bottom-footer {
-    background-color: var(--gray-color);
-    border-top: var(--second-text-color) 1px solid;
-
-}
-
-.footer .field {
-    font-weight: bold;
-}
-
-.footer ul li {
-    line-height: 1.5rem;
-}
-
-.footer .redesociais {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.footer svg {
-    width: 30px;
-    color: #d61414
-}
-
+/* @import url(/css/footer.css); */
 
 /* Aplicação do mobile first */
 /*
@@ -340,7 +313,7 @@ a[data-impacta="home"] {
 .container-responsive {
     max-width: 100%;
     margin: auto;
-    padding: 5%;
+    padding: 2% 2%;
 }
 
 /* Break points */
@@ -348,6 +321,10 @@ a[data-impacta="home"] {
     .container-responsive {
         max-width: 540px;
         margin: auto;
+    }
+
+    .h1 {
+        font-size: 2rem;
     }
 }
 
@@ -362,6 +339,10 @@ a[data-impacta="home"] {
     .container-responsive {
         max-width: 960px;
         margin: auto;
+    }
+
+    .h1 {
+        font-size: 2.5rem;
     }
 }
 
@@ -378,6 +359,7 @@ a[data-impacta="home"] {
         margin: auto;
     }
 }
+
 .btn-menu {
     display: none;      
 }

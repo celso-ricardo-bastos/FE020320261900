@@ -1,0 +1,39 @@
+/* Footer */
+.footer .fields, .footer .footer-fields {
+    padding: 20px 10%;
+}
+
+.footer ul {
+    list-style: none;
+}
+
+.footer .container .top-footer, .footer .container .footer-fields{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer .bottom-footer {
+    background-color: var(--gray-color);
+    border-top: var(--second-text-color) 1px solid;
+
+}
+
+.footer .field {
+    font-weight: bold;
+}
+
+.footer ul li {
+    line-height: 1.5rem;
+}
+
+.footer .redesociais {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.footer svg {
+    width: 30px;
+    color: #d61414
+}
