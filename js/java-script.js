@@ -1,6 +1,5 @@
 // console.log("helo world!")
 
-
 // Criação de variaveis
 var nome;
 var enderecoEmpresa;
@@ -16,6 +15,4 @@ salario = 412.4; // number
 contrato = true; // Bollean
 complemento = null; // null
 
-
 console.log(complemento)
-
