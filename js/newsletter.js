@@ -1,8 +1,34 @@
-var primeiroNome = "Otavio"; // String
-var ultimoNome = "Silva"; // String
-var idade = 52; // number
-var somaIdade;
-var informacao;
+var dadosUser = document.querySelector(".email");
+dadosUser.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        // Inicio do programa
+        var valor = dadosUser.value;
+        console.log(valor.length);
+        
+        
+        
+
+        // Fim do programa
+        e.preventDefault();
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+// var primeiroNome = "Otavio"; // String
+// var ultimoNome = "Silva"; // String
+// var idade = 52; // number
+// var somaIdade;
+// var informacao;
 // Operadores Aritmeticos
 /*
     + adição / concatenar
@@ -10,24 +36,24 @@ var informacao;
     / divisão
     * multiplicação
 */
-somaIdade = idade + 2;
+// somaIdade = idade + 2;
 // informacao = primeiroNome + " " + ultimoNome + " - idade: " + somaIdade + " anos";
-informacao = `${primeiroNome} ${ultimoNome} - idade: ${somaIdade} anos`;
+// informacao = `${primeiroNome} ${ultimoNome} - idade: ${somaIdade} anos`;
 
 // Operadores relacionais
-var nota = "7"; // nota da prova
-var faltas = 10; // faltas do aluno
+// var nota = "7"; // nota da prova
+// var faltas = 10; // faltas do aluno
 
 // Regras para aprovação
-var mediaMeta = 7; // Nota deve ser >=7
-var faltasNoBimestre = 5; // Faltas deve ser < 5
+// var mediaMeta = 7; // Nota deve ser >=7
+// var faltasNoBimestre = 5; // Faltas deve ser < 5
 // >, >=, !=, ==, <, <=, ===
 // var resultatoMedia = nota == mediaMeta; //boolean
 
 
 // Operadores Logicos
 // && = e , || = ou, ! = não
-var resultatoMedia = nota >= mediaMeta && faltas < faltasNoBimestre; //boolean
+// var resultatoMedia = nota >= mediaMeta && faltas < faltasNoBimestre; //boolean
 
 
 // truthy | falsy
@@ -86,5 +112,5 @@ var resultatoMedia = nota >= mediaMeta && faltas < faltasNoBimestre; //boolean
 */
 
 // Ternario
-var respostaAluno = nota > 2 ? "Aprovado" : "Reprovado";
-console.log(respostaAluno);
+// var respostaAluno = nota > 2 ? "Aprovado" : "Reprovado";
+// console.log(respostaAluno);
