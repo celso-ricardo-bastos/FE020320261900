@@ -180,6 +180,76 @@ html {
     min-height: 68vh;
 }
 
+/* Configuração do Container Principal */
+.trust-content {
+    background-color: #dff2ff; /* Azul bem claro do fundo */
+    padding: 60px 40px;
+    max-width: 500px;
+    border-radius: 8px; /* Leve arredondamento nos cantos */
+    font-family: 'Montserrat', sans-serif; /* Fonte próxima à da imagem */
+}
+
+/* Texto Superior (Best dental surgeons) */
+.best-dental {
+    color: #a3c18c; /* Verde oliva suave */
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Título Principal (25K+ STUDENTS...) */
+.h1 {
+    color: #252b42; /* Azul escuro quase preto */
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+/* Descrição (Our goal is...) */
+.trust-content p:not(.best-dental) {
+    color: #737373; /* Cinza médio */
+    font-size: 16px;
+    margin-bottom: 35px;
+    max-width: 350px;
+}
+
+/* Alinhamento dos Botões */
+.trust-btns {
+    display: flex;
+    gap: 15px; /* Espaço entre os botões */
+}
+
+/* Estilo Base dos Botões */
+.trust-btns button {
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* Botão Esquerdo (Preenchido) */
+.trust-btns button:first-child {
+    background-color: #a3c18c;
+    color: white;
+    border: none;
+}
+
+/* Botão Direito (Bordado) */
+.trust-btns button:last-child {
+    background-color: transparent;
+    color: #a3c18c;
+    border: 1px solid #a3c18c;
+}
+
+/* Efeito de Hover (Passar o mouse) */
+.trust-btns button:hover {
+    filter: brightness(0.9);
+    transform: translateY(-2px);
+}
+
 .h1 {
     animation-name: efeitofont;
     animation-duration: 1s;
@@ -390,3 +460,34 @@ a[data-impacta="home"] {
 
 
 
+/* --- Container Principal (Flexbox) --- */
+.secao-estatisticas {
+    display: flex;
+    justify-content: center; /* Distribui os blocos com espaço igual entre eles */
+    align-items: flex-start;    /* Alinha os blocos verticalmente */
+    width: 100%;             /* Largura da seção na tela */
+    max-width: 1200px;      /* Largura máxima para não esticar demais em monitores grandes */
+    padding: 50px 0;
+}
+
+/* --- Estilo de Cada Bloco de Dado --- */
+.bloco-dado {
+    text-align: center; /* Centraliza o texto (H2 e P) dentro do bloco */
+    flex: 1;            /* Faz cada bloco ocupar o mesmo espaço disponível */
+    padding: 20px;
+}
+
+/* --- Estilo do Número (Verde Oliva) --- */
+.numero-destaque {
+    color: #a3c18c; /* Cor exata da imagem: um verde oliva suave */
+    font-size: 2rem; /* Tamanho grande para destaque */
+    font-weight: 700; /* Peso da fonte em negrito */
+    margin-bottom: 5px; /* Pequeno espaço antes da legenda */
+}
+
+/* --- Estilo da Legenda (Escura) --- */
+.legenda-dado {
+    color: #2c3e50; /* Um cinza-azulado escuro para boa leitura */
+    font-size: 1rem; /* Tamanho de texto padrão */
+    font-weight: 400; /* Peso de fonte normal */
+}
