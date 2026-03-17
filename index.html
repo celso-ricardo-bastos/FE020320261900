@@ -25,28 +25,48 @@
             }
         </style>
     -->
+
+    <style>
+        .formata {
+            background-color: aqua !important;
+            color: black  !important;
+        }
+        
+        .active {
+            color: rgb(255, 0, 0);
+            font-weight: bold;
+            text-decoration: #ffffff !important;
+        }
+
+        :target {
+            border: 2px solid darkorange;
+            background-color: beige;
+        }
+    </style>
 </head>
 
 <body>
+
     <!-- Header -->
-    <header class="header">
+     <header class="header">
         <div class="container-responsive">
             <button class="btn-menu">Menu</button>
             <div class="navbar">
                 <!-- Folha de estilo inline -->
                 <!-- <div class="logotipo" style="color:chartreuse">Brandname</div> -->
-                <div class="logo"><a href="#">Brandname</a></div>
+                <div class="logo"><a href="#teste" class="brad" data-logo="true" id="brad">Brandname</a></div>
                 
-                <nav class="menu">
+                <nav class="menu" data-test="verdadeiro">
                     <ul>
-                        <li class="item-munu"><a class="item-link" href="#" title="Home">Home</a></li>
-                        <li class="item-menu"><a class="item-link" href="products/product.html" class="">Product</a></li>
+                        <li class="item-munu"><a class="item-link active" href="#footer" title="Home">Home</a></li>
+                        <li class="item-menu"><a class="item-link" href="#" class="">Product</a></li>
                         <li class="item-menu"><a class="item-link" href="#">Pricing</a></li>
-                        <li class="item-menu"><a class="item-link" href="contacts/contact.html">Contact</a></li>
+                        <li class="item-menu"><a class="item-link" href="#">Contact</a></li>
                         <!-- <li>
                             <a href="https://www.google.com/" target="_blank">Google</a>
                         </li> -->
                     </ul>
+                    <div class="ultimo"></div>
                 </nav>
                 <div class="nav-auth">
                     <a href="#" class="btn-login"> Login </a>
@@ -64,7 +84,7 @@
                     <h1 class="h1">25K+ STUDENTS TRUST US</h1>
                     <p>Our goal is to make online education work for everyone</p>
                     <div class="trust-btns">
-                        <button>Get Quote Now</button>
+                        <button data-js="get-quote">Get Quote Now</button>
                         <button>Learn More</button>
                     </div>
                 </section>
@@ -126,14 +146,18 @@
     </section>
 
 
-    <footer class="footer">
+    <footer class="footer" id="footer">
         <div class="container">
             <div class="fields">
                 <div class="top-footer">
                     <div class="company">
                             <ul>
-                                <li class="field">Company Info</li>
-                                <li>About Us</li>
+                                <li class="field">
+                                    <a class="footer-item-link active" href="javascript:void(0);" title="Company Info">Company Info</a>
+                                </li>
+                                <li>
+                                    <a class="footer-item-link" href="javascript:void(0);" title="About Us">About Us</a>
+                                </li>
                                 <li>Carrier</li>
                                 <li>We are hiring</li>
                                 <li>Blog</li>
@@ -189,9 +213,10 @@
             </div>
         </div>
     </footer>
-    <script src="/js/java-script.js"></script>
+    <!-- <script src="/js/java-script.js"></script> -->
     <script src="/js/newsletter.js"></script>
-    <script src="/js/estatistica.js"></script>
+    <script src="/js/active-menu.js"></script>
+    <script src="/js/appfooter.js"></script>
 </body>
 
 </html>

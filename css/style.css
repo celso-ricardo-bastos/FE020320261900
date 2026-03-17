@@ -126,7 +126,7 @@ html {
 }
 
 .item-link:hover {
-    color: var(--hover-text-color);
+    /* color: var(--hover-text-color); */
     position: relative;
     top: -3px;
 }

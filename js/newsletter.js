@@ -1,28 +1,68 @@
-var dadosUser = document.querySelector(".email");
-dadosUser.addEventListener("keypress", function(e) {
-    if (e.key === "Enter") {
-        // Inicio do programa
-        var valor = dadosUser.value;
-        console.log(valor.length);
-        
-        
-        
+(function() {
+    "use strict"
+    const botaoGetQuote = document.querySelector('[data-js="get-quote"]');
 
-        // Fim do programa
-        e.preventDefault();
+    botaoGetQuote.addEventListener('click', event => {
+        // console.log("Maouse passou sobre")
+        // console.dir(event)
+    });
+
+    botaoGetQuote.addEventListener('click', event => {
+        // console.log("Botão foi clicado")
+        event.target.classList.add('formata');
+    });
+    // console.log(botaoGetQuote)
+
+})()
+
+
+
+    // let menu = document.querySelector('.menu');
+
+    // let att = menu.getAttribute('class')
+    // let teste = menu.hasAttribute('id')
+
+    // menu.classList.add('meuteste123')
+    // menu.style.backgroundColor = 'red'
+    // console.dir();
+
+    // console.dir(menu.parentElement.parentElement.parentElement)
+    // console.dir(menu.closest('.header'))
+
+    // let p = document.createElement('p'); // <p><p/>
+    // let texto = document.createTextNode('Meu elemento html');
+    // p.appendChild(texto) // // <p>Meu elemento html<p/>
+    // menu.insertBefore(menu, menu.firstChild);
+
+/*
+const Carro = {
+        modelo: 'C4',
+        cor: 'Cinza',
+        acerar: function() {
+            let acelerar = 1;
+            console.log(acelerar++);
+        }
     }
-})
+
+    console.log(Carro.acerar())
+
+*/
 
 
+// var dadosUser = document.querySelector(".email");
+// dadosUser.addEventListener("keypress", function(e) {
+//     if (e.key === "Enter") {
+//         // Inicio do programa
+//         var valor = dadosUser.value;
+//         console.log(valor.length);
+        
+        
+        
 
-
-
-
-
-
-
-
-
+//         // Fim do programa
+//         e.preventDefault();
+//     }
+// })
 
 // var primeiroNome = "Otavio"; // String
 // var ultimoNome = "Silva"; // String
