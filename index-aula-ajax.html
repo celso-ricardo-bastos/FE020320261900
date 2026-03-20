@@ -220,7 +220,6 @@
             </div>
         </div>
     </footer>
-    <script src="/js/ajax.js"></script>
     <!-- <script src="/js/java-script.js"></script> -->
     <!-- <script src="/js/newsletter.js"></script>
     <script src="/js/active-menu.js"></script>
@@ -234,55 +233,54 @@
 
         // console.log("hellow");
 
-        const form = document.querySelector('#form');
-        const btnSubmit = document.querySelector('.submit');
-        const inputEamil = document.querySelector('.email');
-        const logradouro = document.querySelector('.logradouro');
-        const divMendagem  = document.querySelector('.aviso-mensagem');
+        // const form = document.querySelector('#form');
+        // const btnSubmit = document.querySelector('.submit');
+        // const inputEamil = document.querySelector('.email');
+        // const logradouro = document.querySelector('.logradouro');
+        // const divMendagem  = document.querySelector('.aviso-mensagem');
 
-        function validaEmail (email) {
-            return email.includes("@");
-        }
+        // function validaEmail (email) {
+        //     return email.includes("@");
+        // }
 
-        function formatacao(divMendagem, status, inputEamil) {
-            if(!status) {
-                divMendagem.innerHTML = 'Email invalido';
-                divMendagem.style.fontsize = '2rem';
-                divMendagem.style.color = '#ff0000';
-                inputEamil.style.border = '#ff0000 solid 2px';
-                return;
-            }
+        // function formatacao(divMendagem, status, inputEamil) {
+        //     if(!status) {
+        //         divMendagem.innerHTML = 'Email invalido';
+        //         divMendagem.style.fontsize = '2rem';
+        //         divMendagem.style.color = '#ff0000';
+        //         inputEamil.style.border = '#ff0000 solid 2px';
+        //         return;
+        //     }
 
-            divMendagem.innerHTML = 'Dados enviados com sucesso!';
-            inputEamil.style.border = "#000 solid 1px";
-        }
+        //     divMendagem.innerHTML = 'Dados enviados com sucesso!';
+        //     inputEamil.style.border = "#000 solid 1px";
+        // }
 
         
-        btnSubmit.addEventListener('click', function (event) {
-                event.preventDefault();
+        // btnSubmit.addEventListener('click', function (event) {
+        //         event.preventDefault();
 
-                // debugger
-                let email = inputEamil.value;
-                const valida = validaEmail(email);
-                if (!valida ) {
-                    formatacao(divMendagem, valida, inputEamil)
-                }
+        //         // debugger
+        //         let email = inputEamil.value;
+        //         const valida = validaEmail(email);
+        //         if (!valida ) {
+        //             formatacao(divMendagem, valida, inputEamil)
+        //         }
             
-                if(valida) {    
-                    const ajax = new $_ajax('POST', 'http://localhost:3001/newsletter');
-                    ajax.submitAjax(function (xhr) {
-                        if(xhr.status == 200 && xhr.readyState == 4) {
-                            const resposta = JSON.parse(xhr.responseText);
-                            let status = resposta.status;
-                            formatacao(divMendagem, status, inputEamil)
-                        }
-                    },
-                    'json', 
-                    {email: email}
-                )
-                }
+        //         if(valida) {     
+        //             const xhr = new XMLHttpRequest(); //AJAX
+        //             xhr.open('GET', `http://localhost:3001/newsletter?email=${email}&nome=celso&idade=20`);
+        //             xhr.onreadystatechange = function () {
+        //                 if(xhr.status == 200 && xhr.readyState == 4) {
+        //                     const resposta = JSON.parse(xhr.responseText);
+        //                     let status = resposta.status;
+        //                     formatacao(divMendagem, status, inputEamil)
+        //                 }
+        //             }
+        //             xhr.send();
+        //         }
 
-        });
+        // });
 
 
         // const form = document.querySelector('#form');
