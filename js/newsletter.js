@@ -1,21 +1,55 @@
-(function() {
+(function(ajax, Validate) {
     "use strict"
-    const botaoGetQuote = document.querySelector('[data-js="get-quote"]');
+        const form = document.querySelector('#form');
+        const btnSubmit = document.querySelector('.submit');
+        const inputEamil = document.querySelector('.email');
+        const logradouro = document.querySelector('.logradouro');
+        const divMendagem  = document.querySelector('.aviso-mensagem');
+        const valida = new Validate();
 
-    botaoGetQuote.addEventListener('click', event => {
-        // console.log("Maouse passou sobre")
-        // console.dir(event)
-    });
+        btnSubmit.addEventListener('click', function (event) {
+                event.preventDefault();
+                let email = inputEamil.value; 
+                
+                
+                if (!valida.testEmail(email)) {
+                    divMendagem.innerHTML = 'Ops! Email invalido'
+                    divMendagem.classList.add('erro');
+                }
 
-    botaoGetQuote.addEventListener('click', event => {
-        // console.log("Botão foi clicado")
-        event.target.classList.add('formata');
-    });
-    // console.log(botaoGetQuote)
+                else {
+                    divMendagem.innerHTML = 'Aguarde, estamos processando . . .';
+                    ajax({
+                        method:'POST',
+                        url: 'http://localhost:3001/news',
+                        data: {email: email},
+                        type: 'json',
+                    }).submitAjax(function(response, status) {
 
-})()
+                        
 
+                        if (status == 200) {
+                            divMendagem.innerHTML = 'Email enviado com sucesso!';
+                            divMendagem.classList.remove('erro');
+                            divMendagem.classList.add('sucesso');
+                        }
+                        console.log(response, status)
+                    })
+                }
+        });
 
+})($_ajax, Validate)
+
+    // const botaoGetQuote = document.querySelector('[data-js="get-quote"]');
+    // botaoGetQuote.addEventListener('click', event => {
+    //     // console.log("Maouse passou sobre")
+    //     // console.dir(event)
+    // });
+    // botaoGetQuote.addEventListener('click', event => {
+    //     // console.log("Botão foi clicado")
+    //     event.target.classList.add('formata');
+    // });
+    // // console.log(botaoGetQuote)
 
     // let menu = document.querySelector('.menu');
 

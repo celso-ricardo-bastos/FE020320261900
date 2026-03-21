@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/css/impressao.css" media="print">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="stylesheet" href="/css/newsletter.css">
+    <link rel="icon" href="images/favicon.ico" />
 
     <!-- Folha de estilo interna -->
     <!--
@@ -144,8 +145,8 @@
                         <div class="aviso-mensagem"></div>
                         <input class="email" type="text" placeholder="Your Email" name="email">
                         <input type="submit" value="newsletter" class="btn submit" name="botao">
-                        <br>
-                        Logradouro: <input type="text" disabled class="logradouro">
+                        <!-- <br> -->
+                        <!-- Logradouro: <input type="text" disabled class="logradouro"> -->
                     </form>
                 </div>
             </div>
@@ -220,10 +221,13 @@
             </div>
         </div>
     </footer>
-    <script src="/js/ajax.js"></script>
+    <script src="js/ajax.js"></script>
+    <script src="js/validate.js"></script>
+    <script src="js/newsletter.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/fet-promisse.js"></script>
     <!-- <script src="/js/java-script.js"></script> -->
-    <!-- <script src="/js/newsletter.js"></script>
-    <script src="/js/active-menu.js"></script>
+    <!-- <script src="/js/active-menu.js"></script>
     <script src="/js/addActiveIcone.js"></script>
     <script src="/js/appfooter.js"></script> -->
     <!-- <script src="/js/testeEmail.js"></script> -->
@@ -231,60 +235,6 @@
     <button class="btn-f"> Executa JS</button>
     <div class="relogio"></div>
     <script>
-
-        // console.log("hellow");
-
-        const form = document.querySelector('#form');
-        const btnSubmit = document.querySelector('.submit');
-        const inputEamil = document.querySelector('.email');
-        const logradouro = document.querySelector('.logradouro');
-        const divMendagem  = document.querySelector('.aviso-mensagem');
-
-        function validaEmail (email) {
-            return email.includes("@");
-        }
-
-        function formatacao(divMendagem, status, inputEamil) {
-            if(!status) {
-                divMendagem.innerHTML = 'Email invalido';
-                divMendagem.style.fontsize = '2rem';
-                divMendagem.style.color = '#ff0000';
-                inputEamil.style.border = '#ff0000 solid 2px';
-                return;
-            }
-
-            divMendagem.innerHTML = 'Dados enviados com sucesso!';
-            inputEamil.style.border = "#000 solid 1px";
-        }
-
-        
-        btnSubmit.addEventListener('click', function (event) {
-                event.preventDefault();
-
-                // debugger
-                let email = inputEamil.value;
-                const valida = validaEmail(email);
-                if (!valida ) {
-                    formatacao(divMendagem, valida, inputEamil)
-                }
-            
-                if(valida) {    
-                    const ajax = new $_ajax('POST', 'http://localhost:3001/newsletter');
-                    ajax.submitAjax(function (xhr) {
-                        if(xhr.status == 200 && xhr.readyState == 4) {
-                            const resposta = JSON.parse(xhr.responseText);
-                            let status = resposta.status;
-                            formatacao(divMendagem, status, inputEamil)
-                        }
-                    },
-                    'json', 
-                    {email: email}
-                )
-                }
-
-        });
-
-
         // const form = document.querySelector('#form');
         // const btnSubmit = document.querySelector('.submit');
         // const inputEamil = document.querySelector('.email');
