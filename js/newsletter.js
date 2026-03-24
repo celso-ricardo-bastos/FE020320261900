@@ -26,8 +26,6 @@
                         type: 'json',
                     }).submitAjax(function(response, status) {
 
-                        
-
                         if (status == 200) {
                             divMendagem.innerHTML = 'Email enviado com sucesso!';
                             divMendagem.classList.remove('erro');

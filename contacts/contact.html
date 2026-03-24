@@ -13,11 +13,17 @@
             /* background-color: aqua;
             background: linear-gradient(rgb(0, 0, 118), rgb(113, 130, 255)); */
         }
+
+        .erro {
+             background-color: rgb(252, 0, 0) !important;
+             color: #ffffff !important;
+        }
     </style>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <section>
-        <section>
+        <!-- <section>
             <h1 class="titulo bg-primary bg-gradient">Grid</h1>
 
             <div class="row">
@@ -26,16 +32,53 @@
                 <div class="col-12 col-md-6 border">coluna 3</div>
                 <div class="col-12 col-md-6 border">coluna 4</div>
             </div>
-        </section>    
-
+        </section>     -->
+        <!-- Header -->
+            <header class="header">
+                <div class="container-responsive">
+                    <button class="btn-menu">Menu</button>
+                    <div class="navbar">
+                        <!-- Folha de estilo inline -->
+                        <!-- <div class="logotipo" style="color:chartreuse">Brandname</div> -->
+                        <div class="logo"><a href="#teste" class="brad" data-logo="true" id="brad">Brandname</a></div>
+                        
+                        <nav class="menu" data-test="verdadeiro">
+                            <ul>
+                                <li class="item-munu"><a class="item-link active" href="#footer" title="Home">Home</a></li>
+                                <li class="item-menu"><a class="item-link" href="#" class="">Product</a></li>
+                                <li class="item-menu"><a class="item-link" href="#">Pricing</a></li>
+                                <li class="item-menu"><a class="item-link" href="contacts/contact.html">Contact</a></li>
+                                <!-- <li>
+                                    <a href="https://www.google.com/" target="_blank">Google</a>
+                                </li> -->
+                            </ul>
+                            <div class="ultimo"></div>
+                        </nav>
+                        <div class="nav-auth">
+                            <a href="#" class="btn-login"> Login </a>
+                            <a href="#" class="btn">Join Us</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
         <div class="container-md">
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Modal
-            </button>
+            </button> -->
             <h1 class="text-center text-sm-start text-md-end">Contacts</h1>
             <p id="desc">Lorem ipsum dolor sit amet consectetur, adipisicing eli.</p>
             <form>
+                <div class="form-group p-2">
+                    <label for="cep">Cep:</label>
+                    <input class="form-control cep" type="text" id="cep" name="cep" pattern="[A-Za-z]{10}">
+                </div>
+
+                <div class="form-group p-2">
+                    <label for="logradouro">Logradouro:</label>
+                    <input class="form-control" type="text" id="logradouro" name="logradouro" pattern="[A-Za-z]{10}">
+                </div>
+
                 <div class="form-group p-2">
                     <label for="caixa-nome">Nome:</label>
                     <input class="form-control" type="text" id="caixa-nome" name="nome" placeholder="Digite seu nome" pattern="[A-Za-z]{10}">
@@ -66,34 +109,38 @@
         <!-- Button trigger modal -->
 
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        
-            <form>
-                Nome: <input class="form-control" type="text">
-                Senha <input class="form-control" type="password">
-            </form>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Login</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                
+                    <form>
+                        Nome: <input class="form-control" type="text">
+                        Senha <input class="form-control" type="password">
+                    </form>
 
 
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Logar</button>
-      </div>
-    </div>
-  </div>
-</div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Logar</button>
+            </div>
+            </div>
+        </div>
+        </div>
 
         <!-- <iframe src="../index.html" frameborder="1"></iframe> -->
     
     </section>
 
+
+    <script src="../js/jquery-4.0.0.js"></script>
+    <script src="../js/jquery.mask.js"></script>
+    <script src="../js/contact.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
